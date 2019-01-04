@@ -2,7 +2,7 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode10.0
+osx_image: xcode10.1
 language: swift
 
 # cache: cocoapods
@@ -12,5 +12,5 @@ language: swift
 # - pod install --project-directory=Example
 
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/UnlockCodeViewController.xcworkspace -scheme UnlockCodeViewController-Example -sdk iphonesimulator11.4 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/UnlockCodeViewController.xcworkspace -scheme UnlockCodeViewController-Example -sdk iphonesimulator12.1 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
