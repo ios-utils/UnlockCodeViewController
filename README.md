@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.png" alt="UnlockCodeViewController" width="358" height="146"/>
+<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.jpg" alt="UnlockCodeViewController" width="625" height="625"/>
 </p>
 
 # UnlockCodeViewController
@@ -10,13 +10,13 @@
 [![License](https://img.shields.io/cocoapods/l/UnlockCodeViewController.svg?style=flat)](https://cocoapods.org/pods/UnlockCodeViewController)
 [![Platform](https://img.shields.io/cocoapods/p/UnlockCodeViewController.svg?style=flat)](https://cocoapods.org/pods/UnlockCodeViewController)
 
-## Example
+## Example Project
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
+
+### CocoaPods
 
 UnlockCodeViewController is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
