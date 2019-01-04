@@ -1,0 +1,66 @@
+##
+## HealthEngine SwiftLint
+##
+
+opt_in_rules:
+  - empty_count
+  - strict_fileprivate
+  - force_unwrapping
+
+force_cast:
+  severity: error
+
+force_try:
+  severity: error
+
+identifier_name:
+  min_length:
+    warning: 3 # warning
+    error: 3 # error
+
+line_length:
+  warning: 180
+  error: 220
+  ignores_comments: true
+  ignores_function_declarations: true
+
+type_body_length:
+  - 300 # warning
+  - 400 # error
+
+disabled_rules: # ignore these rules
+  - todo
+  - trailing_whitespace
+
+type_name:
+  min_length: 3 # warning only
+  max_length:
+    warning: 40 # warning
+    error: 50 # error
+
+custom_rules:
+  # Avoid using print statements
+  # Use Logger() instead
+  avoid_print:
+    name: "Avoid Print Statements"
+    message: "Use alternatives to print where possible"
+    excluded: "(.*LogAdapter|.*/Logger|.*Tests).swift"
+    regex: '(debugPrint|print|NSLog)\('
+    match_kinds: identifier
+    severity: warning
+
+  # Root level elements (usually types) should have a
+  # single blank line before the closing brace
+  func_trailing_newline:
+    name: "Trailing blank line before closing brace"
+    message: "Functions should have a single blank line after it"
+    regex: '\}\ *\n\}'
+    severity: warning
+
+  # Type declarations should have a single blank line
+  # following the opening brace
+  type_declaration_whitespace:
+    name: "Type Declarations Whitespace"
+    message: "Type declarations should be followed by a single blank line"
+    regex: '^([@\w\d_]+\ +)?(?:class|enum|struct|extension) [\w\d_]+[^\n]*?\{\n\ +[^\n\ ]'
+    severity: warning
