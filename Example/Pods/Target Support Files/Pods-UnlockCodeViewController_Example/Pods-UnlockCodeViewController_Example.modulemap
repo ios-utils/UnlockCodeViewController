@@ -1,0 +1,6 @@
+framework module Pods_UnlockCodeViewController_Example {
+  umbrella header "Pods-UnlockCodeViewController_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
