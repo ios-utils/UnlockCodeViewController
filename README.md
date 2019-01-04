@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.png" alt="UnlockCodeViewController"/>
+</p>
+
 # UnlockCodeViewController
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4f2d0af666c4407091fcff2363aff515)](https://app.codacy.com/app/reececomo/UnlockCodeViewController?utm_source=github.com&utm_medium=referral&utm_content=reececomo/UnlockCodeViewController&utm_campaign=Badge_Grade_Dashboard)
