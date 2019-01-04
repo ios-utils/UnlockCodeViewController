@@ -1,0 +1,16 @@
+PODS:
+  - UnlockCodeViewController (0.1.0)
+
+DEPENDENCIES:
+  - UnlockCodeViewController (from `../`)
+
+EXTERNAL SOURCES:
+  UnlockCodeViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UnlockCodeViewController: a964b5687088dabb122b89bd81f165420dbb43c4
+
+PODFILE CHECKSUM: 85ad74f8164f03f73d63de6959370e10e0687816
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,6 @@
+framework module UnlockCodeViewController {
+  umbrella header "UnlockCodeViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
