@@ -25,7 +25,7 @@ internal extension Data {
     
     /// SHA-256 implementation
     internal var sha256: Data {
-        var hash = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
+        var hash = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
         withUnsafeBytes {
             _ = CC_SHA256($0, CC_LONG(count), &hash)
         }

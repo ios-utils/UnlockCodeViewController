@@ -17,7 +17,7 @@ class DataExtensionTests: XCTestCase {
     func testSHA256ProducesExpectedHash() {
         let input = "Example"
         let expected = "D029F87E3D80F8FD9B1BE67C7426B4CC1FF47B4A9D0A8461C826A59D8C5EB6CD"
-        let actual = input.data(using: .utf8)!.sha256.hexString
+        let actual = input.data(using: .utf8)?.sha256.hexString
         
         XCTAssertEqual(expected, actual)
     }
@@ -27,8 +27,8 @@ class DataExtensionTests: XCTestCase {
         let input1 = "Example"
         let input2 = "example"
         
-        let actual1 = input1.data(using: .utf8)!.sha256.hexString
-        let actual2 = input2.data(using: .utf8)!.sha256.hexString
+        let actual1 = input1.data(using: .utf8)?.sha256.hexString
+        let actual2 = input2.data(using: .utf8)?.sha256.hexString
         
         XCTAssertNotEqual(actual1, actual2)
     }
