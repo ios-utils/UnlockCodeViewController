@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UnlockCodeViewController_Example' do
+  pod 'UnlockCodeViewController', :path => '../'
+
+  target 'UnlockCodeViewController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
