@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.png" alt="UnlockCodeViewController"/>
+<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.png" alt="UnlockCodeViewController" width="358" height="146"/>
 </p>
 
 # UnlockCodeViewController
