@@ -7,30 +7,50 @@
 [![Platform](https://img.shields.io/cocoapods/p/UnlockCodeViewController.svg?style=flat)](https://cocoapods.org/pods/UnlockCodeViewController)
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.jpg" alt="UnlockCodeViewController" style="max-width:625px;width:auto;height:auto;"/>
+<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.jpg" alt="UnlockCodeViewController" width="625" style="max-width:625px;width:auto;height:auto;"/>
 </p>
 
 ## Usage
+
+### Basic Usage
 ```swift
-// Create an unlock code somewhere
-let myCode = UnlockCode(generateFor: "MyCode123", withSalt: "$sP%2mK!2Df")
-
 // Create the view controller
-let myCodeViewController = UnlockCodeViewController(unlockCode: myCode) { _ in
-    // Optionally put anything here that will get called when the code has finished unlocking
-    navigationController.setViewControllers([myLockedContentViewController], animated: true)
-}
-
-// Provide any additional config
-myCodeViewController.pinCharacter = "*"
-myCodeViewController.blankCharacter = "_"
-myCodeViewController.playsSound = false
-myCodeViewController.autoDismissOnUnlock = false
-myCodeViewController.autoDismissOnFailure = true
-myCodeViewController.maxAttemptsAllowed = 5
+let viewController = UnlockCodeViewController(unlockCode: myCode)
 
 // Present the view controller
-navigationController.setViewControllers([myCodeViewController], animated: false)
+navigationController.setViewControllers([viewController], animated: false)
+
+// Set the unlock action (this can also be set in the constructor)
+viewController.whenUnlocked { _ in
+    navigationController.setViewControllers([myLockedContentViewController], animated: true)
+}
+```
+
+### Additional Config
+```swift
+// (Optional) Additional config
+viewController.pinCharacter = "*"           // default: "●"
+viewController.blankCharacter = "_"         // default: "○"
+viewController.playsSound = false           // default: `true`
+viewController.autoDismissOnUnlock = false  // default: `false`
+viewController.autoDismissOnFailure = true  // default: `false`
+viewController.maxAttemptsAllowed = 5       // default: 3
+```
+
+### Generating an UnlockCode
+- Ideally you would set the unlock code remotely, and load it into your app.
+- Then next best option would be to use a pre-generated code. Otherwise anyone can decompile your application and read your code in plaintext.
+```swift
+// Using a pre-generated code (e.g. "123456")
+let myCode = UnlockCode(
+    hash: "2DBD6C5C6085CB173C76E0856CF2EB85DB6A464264704528187E18A808A0D569",
+    salt: "O%0jc@_Qy)gAa9d",
+    length: 6,
+    isNumeric: true
+)
+
+// Or generate one on the fly (*Not Recommended*)
+let myGeneratedCode = try! UnlockCode(generateFor: "123456")
 ```
 
 ## Example Project
