@@ -7,12 +7,35 @@
 [![Platform](https://img.shields.io/cocoapods/p/UnlockCodeViewController.svg?style=flat)](https://cocoapods.org/pods/UnlockCodeViewController)
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.jpg" alt="UnlockCodeViewController" width="625" height="625"/>
+<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.jpg" alt="UnlockCodeViewController" style="max-width:625px;width:auto;height:auto;"/>
 </p>
+
+## Usage
+```swift
+// Create an unlock code somewhere
+let myCode = UnlockCode(generateFor: "MyCode123", withSalt: "$sP%2mK!2Df")
+
+// Create the view controller
+let myCodeViewController = UnlockCodeViewController(unlockCode: myCode) { _ in
+    // Optionally put anything here that will get called when the code has finished unlocking
+    navigationController.setViewControllers([myLockedContentViewController], animated: true)
+}
+
+// Provide any additional config
+myCodeViewController.pinCharacter = "*"
+myCodeViewController.blankCharacter = "_"
+myCodeViewController.playsSound = false
+myCodeViewController.autoDismissOnUnlock = false
+myCodeViewController.autoDismissOnFailure = true
+myCodeViewController.maxAttemptsAllowed = 5
+
+// Present the view controller
+navigationController.setViewControllers([myCodeViewController], animated: false)
+```
 
 ## Example Project
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run in Xcode 10 or greater.
 
 ## Installation
 

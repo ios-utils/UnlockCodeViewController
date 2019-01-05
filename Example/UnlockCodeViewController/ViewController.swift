@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         }
         
         // Dismiss when unlocked
-        viewController.autodismissOnUnlock = true
+        viewController.autoDismissOnUnlock = true
         
         // Add view controller to the heirachy
         present(viewController, animated: false)

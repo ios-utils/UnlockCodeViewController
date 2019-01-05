@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'UnlockCodeViewController'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'A simple drop-in Unlock Code view controller.'
 
   s.description      = <<-DESC

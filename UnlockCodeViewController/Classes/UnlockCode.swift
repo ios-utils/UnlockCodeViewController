@@ -1,32 +1,26 @@
-//
-//  UnlockCodeViewController
-//  Reece Como
-//
-//  Created by Reece Como on 21/4/18.
-//  Copyright © 2018 Reece Como. All rights reserved.
-//
-
 import Foundation
 
 /**
- An Unlock Code struct
+ An Unlock Code
  
- When creating Unlock Codes, you should pre-generate them where possible. If you don't
-  pregenerate them, anyone can just decompile your App and read the code in plaintext.
+ You should pre-generate the Unlock Code where possible. If you didn't, anyone could just
+  decompile your App and read your code in plaintext. Ideally this would come from a remote
+  server, and then be stored in the keychain.
  
- Obviously `length` and `isNumeric` properties greatly reduce the security of your code,
-  but these are required to present a "4 digit pin" style interface. If your security requirements
-  are greater, than this may not be the right library for your app.
+ Obviously giving the `length` and `isNumeric` properties greatly reduce the amount of time
+  it takes to crack the unlock code, but these are required to present the "4 digit pin"
+  style interface.
  */
 public struct UnlockCode {
     
     // MARK: - Properties
     
-    /// The hash of the unlock code
-    let hash: String
+    /// The SHA-256 hash of the Unlock Code
+    internal let hash: String
     
-    /// Should be a sufficiently long salt
-    let salt: String
+    /// The salt used to generate the hash
+    /// - Note: This should be sufficiently long
+    internal let salt: String
     
     /// Length of the string
     /// - Note: This is required presentation meta-data
@@ -60,9 +54,11 @@ public struct UnlockCode {
     /// Generate a new code on the fly
     /// - Note: It is recommended you do not use this, and instead use a pre-generated code.
     ///
-    public init(generateFor string: String, withSalt salt: String = "") {
+    public init(generateFor string: String, withSalt salt: String = "") throws {
         guard let hash = string.sha256Hash(salt: salt) else {
-            fatalError("Unable to generate a SHA256 hash for string: \"\(string)\"")
+            throw NSError(domain: "Unable to generate a SHA256 hash for string: \"\(string)\"",
+                          code: -1,
+                          userInfo: nil)
         }
         
         self.salt = salt

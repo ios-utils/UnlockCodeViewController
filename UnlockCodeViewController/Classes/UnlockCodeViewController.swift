@@ -16,26 +16,26 @@ public class UnlockCodeViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Configuration
     
+    /// Set unlockCode during init/viewDidLoad
+    public var unlockCode: UnlockCode!
+    
     /// Pin character
     public var pinCharacter = "●"
     
     /// Blank character
     public var blankCharacter = "○"
     
-    /* @required Set unlockCode during init/viewDidLoad */
-    public var unlockCode: UnlockCode!
-    
-    /// Plays sound
+    /// Plays sound (default: `true`)
     public var playsSound = true
     
-    /// Hide on unlock
-    public var autodismissOnUnlock = false
+    /// Dismiss when unlocked (default: `false`)
+    public var autoDismissOnUnlock = false
     
-    /// Max attempts. -1 is unlimited.
+    /// Dismiss when failed to unlock (default: `false`)
+    public var autoDismissOnFailure = false
+    
+    /// Max attempts (Zero or less is unlimited)
     public var maxAttemptsAllowed = 3
-    
-    /// On unlock callback
-    private var onUnlockClosure: ((_ code: String) -> Void)?
     
     // MARK: - Properties
     
@@ -46,6 +46,9 @@ public class UnlockCodeViewController: UIViewController, UITextFieldDelegate {
     private(set) public var currentAttempt = 0
     
     // MARK: - Private properties
+    
+    /// On unlock callback
+    private var onUnlockClosure: ((_ code: String) -> Void)?
     
     /// Display label
     private var displayLabel: UILabel!
@@ -59,9 +62,14 @@ public class UnlockCodeViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Initialisers
     
     ///
-    /// Unlock code details
+    /// Initialise with an Unlock Code
+    /// - Parameters:
+    ///     - unlockCode:   The `UnlockCode` required to progress
+    ///     - whenUnlocked: An optional callback that is triggered when the viewController is
+    ///                     unlocked.
     ///
-    public convenience init(unlockCode: UnlockCode, whenUnlocked onUnlockClosure: ((_ code: String) -> Void)? = nil) {
+    public convenience init(unlockCode: UnlockCode,
+                            whenUnlocked onUnlockClosure: ((_ code: String) -> Void)? = nil) {
         self.init()
         self.unlockCode = unlockCode
         whenUnlocked(onUnlockClosure)
@@ -88,7 +96,7 @@ public class UnlockCodeViewController: UIViewController, UITextFieldDelegate {
             AudioServicesPlaySystemSound(1100)
         }
         
-        if autodismissOnUnlock {
+        if autoDismissOnUnlock {
             dismissOrPop()
         }
         
@@ -111,6 +119,10 @@ public class UnlockCodeViewController: UIViewController, UITextFieldDelegate {
     /// Maximum attempts reached
     public func maxAttemptsReached() {
         isEnabled = false
+        
+        if autoDismissOnFailure {
+            dismissOrPop()
+        }
     }
     
     // MARK: - UIViewController

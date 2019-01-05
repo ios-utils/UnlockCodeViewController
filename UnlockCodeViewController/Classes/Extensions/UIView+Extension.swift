@@ -10,10 +10,10 @@ import UIKit
 
 internal extension UIView {
     
-    /**
-     * Shake Animation (rapiddg)
-     * Source: https://www.rapiddg.com/blog/shaking-animation-swift
-     */
+    ///
+    /// Shake Animation (rapiddg)
+    /// Source: https://www.rapiddg.com/blog/shaking-animation-swift
+    ///
     @discardableResult
     internal func shake(repeatCount: Float = 0) -> CABasicAnimation {
         let animation = CABasicAnimation(keyPath: "position")
