@@ -50,7 +50,7 @@ let myCode = UnlockCode(
 )
 
 // Or generate one on the fly (*Not Recommended*)
-let myGeneratedCode = try! UnlockCode(generateFor: "123456")
+let myGeneratedCode = UnlockCode(generateFor: "123456")
 ```
 
 ## Example Project

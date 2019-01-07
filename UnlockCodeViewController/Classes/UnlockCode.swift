@@ -54,7 +54,7 @@ public struct UnlockCode {
     /// Generate a new code on the fly
     /// - Note: It is recommended you do not use this, and instead use a pre-generated code.
     ///
-    public init(generateFor string: String, withSalt salt: String = "") throws {
+    public init(generateFor string: String, withSalt salt: String = "") {
         self.hash = string.sha256Hash(salt: salt)
         self.salt = salt
         length = string.count

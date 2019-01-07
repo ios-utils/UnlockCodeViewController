@@ -36,7 +36,7 @@ class UnlockCodeTests: XCTestCase {
     
     /// Test that generated codes evaluate to the same as a pregenerated code
     func testGenerateForInit() {
-        let generatedCode = try! UnlockCode(generateFor: "123456", withSalt: "O%0jc@_Qy)gAa9d") // swiftlint:disable:this force_unwrapping
+        let generatedCode = UnlockCode(generateFor: "123456", withSalt: "O%0jc@_Qy)gAa9d")
         XCTAssertEqual(generatedCode.hash, unlockCode.hash)
         XCTAssertEqual(generatedCode.isNumeric, unlockCode.isNumeric)
         XCTAssertEqual(generatedCode.length, unlockCode.length)
