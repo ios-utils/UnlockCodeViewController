@@ -1,6 +1,8 @@
 # UnlockCodeViewController
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4f2d0af666c4407091fcff2363aff515)](https://app.codacy.com/app/reececomo/UnlockCodeViewController?utm_source=github.com&utm_medium=referral&utm_content=reececomo/UnlockCodeViewController&utm_campaign=Badge_Grade_Dashboard)
+A simple drop-in Unlock Code view controller.
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4f2d0af666c4407091fcff2363aff515)](https://app.codacy.com/app/reececomo/UnlockCodeViewController?utm_source=github.com&utm_medium=referral&utm_content=reececomo/UnlockCodeViewController&utm_campaign=Badge_Grade_Dashboard)[![CodeCov Badge](https://codecov.io/gh/reececomo/UnlockCodeViewController/branch/master/graph/badge.svg)](https://codecov.io/gh/reececomo/UnlockCodeViewController)
 [![Build Status](https://travis-ci.org/reececomo/UnlockCodeViewController.svg?branch=master)](https://travis-ci.org/reececomo/UnlockCodeViewController)
 [![Version](https://img.shields.io/cocoapods/v/UnlockCodeViewController.svg?style=flat)](https://cocoapods.org/pods/UnlockCodeViewController)
 [![License](https://img.shields.io/cocoapods/l/UnlockCodeViewController.svg?style=flat)](https://cocoapods.org/pods/UnlockCodeViewController)
