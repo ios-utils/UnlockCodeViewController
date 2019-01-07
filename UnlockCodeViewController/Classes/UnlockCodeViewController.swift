@@ -238,6 +238,7 @@ public class UnlockCodeViewController: UIViewController, UITextFieldDelegate {
         hiddenInput.isHidden = true
         hiddenInput.isSecureTextEntry = true
         hiddenInput.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        hiddenInput.accessibilityIdentifier = "UnlockCodeInput"
         
         if unlockCode.isNumeric {
             hiddenInput.keyboardType = .numberPad

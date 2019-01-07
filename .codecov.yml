@@ -1,0 +1,7 @@
+coverage:
+  range: "75...95"
+  round: down
+  precision: 2
+
+ignore:
+  - "Example/*"  # ignore all example code

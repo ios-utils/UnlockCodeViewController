@@ -40,7 +40,18 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8938C571FEB5A910B2C5017BF60BECB8"
+            BuildableName = "UnlockCodeViewController.framework"
+            BlueprintName = "UnlockCodeViewController"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -49,6 +60,26 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "UnlockCodeViewController_Tests.xctest"
                BlueprintName = "UnlockCodeViewController_Tests"
+               ReferencedContainer = "container:UnlockCodeViewController.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "29C58C8D21E3CD9900CC7CD2"
+               BuildableName = "UnlockCodeViewController_ExampleUITests.xctest"
+               BlueprintName = "UnlockCodeViewController_ExampleUITests"
+               ReferencedContainer = "container:UnlockCodeViewController.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "29C58C9E21E3CEF300CC7CD2"
+               BuildableName = "UnlockCodeViewController_UITests.xctest"
+               BlueprintName = "UnlockCodeViewController_UITests"
                ReferencedContainer = "container:UnlockCodeViewController.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -11,11 +11,11 @@ import Foundation
 internal extension String {
     
     /// Hash using SHA256 (with salt)
-    internal func sha256Hash(salt: String = "") -> String? {
+    internal func sha256Hash(salt: String = "") -> String {
         let saltedString = self + salt
-        let encodedData = saltedString.data(using: .utf8)
+        let encodedData = saltedString.data(using: .utf8)! // swiftlint:disable:this force_unwrapping
         
-        return encodedData?.sha256.hexString
+        return encodedData.sha256.hexString
     }
     
 }

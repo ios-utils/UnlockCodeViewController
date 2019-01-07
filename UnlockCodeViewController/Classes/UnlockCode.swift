@@ -55,15 +55,8 @@ public struct UnlockCode {
     /// - Note: It is recommended you do not use this, and instead use a pre-generated code.
     ///
     public init(generateFor string: String, withSalt salt: String = "") throws {
-        guard let hash = string.sha256Hash(salt: salt) else {
-            throw NSError(domain: "Unable to generate a SHA256 hash for string: \"\(string)\"",
-                          code: -1,
-                          userInfo: nil)
-        }
-        
+        self.hash = string.sha256Hash(salt: salt)
         self.salt = salt
-        self.hash = hash
-        
         length = string.count
         isNumeric = CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: string))
     }

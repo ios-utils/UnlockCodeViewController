@@ -10,6 +10,7 @@
 		29295FB421DF0E8E002D19EC /* UnlockCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29295FB221DF0DEE002D19EC /* UnlockCodeTests.swift */; };
 		29295FB721DF10FC002D19EC /* Data+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29295FB521DF10DC002D19EC /* Data+ExtensionTests.swift */; };
 		29295FBA21DF1311002D19EC /* String+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29295FB821DF12E4002D19EC /* String+ExtensionTests.swift */; };
+		29C58CA921E3CEFF00CC7CD2 /* UnlockCodeViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C58C8821E3CBBE00CC7CD2 /* UnlockCodeViewControllerUITests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -20,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		29C58CA421E3CEF300CC7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = UnlockCodeViewController_Example;
+		};
 		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
@@ -34,6 +42,9 @@
 		29295FB221DF0DEE002D19EC /* UnlockCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockCodeTests.swift; sourceTree = "<group>"; };
 		29295FB521DF10DC002D19EC /* Data+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ExtensionTests.swift"; sourceTree = "<group>"; };
 		29295FB821DF12E4002D19EC /* String+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionTests.swift"; sourceTree = "<group>"; };
+		29C58C8821E3CBBE00CC7CD2 /* UnlockCodeViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockCodeViewControllerUITests.swift; sourceTree = "<group>"; };
+		29C58C9F21E3CEF300CC7CD2 /* UnlockCodeViewController_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnlockCodeViewController_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C58CA321E3CEF300CC7CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FD1FC684F90A3F11FA42E70 /* Pods-UnlockCodeViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnlockCodeViewController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnlockCodeViewController_Example/Pods-UnlockCodeViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UnlockCodeViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnlockCodeViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		29C58C9C21E3CEF300CC7CD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,12 +102,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		29C58CA021E3CEF300CC7CD2 /* UnlockCodeViewController_UITests */ = {
+			isa = PBXGroup;
+			children = (
+				29C58C8821E3CBBE00CC7CD2 /* UnlockCodeViewControllerUITests.swift */,
+				29C58CA321E3CEF300CC7CD2 /* Info.plist */,
+			);
+			path = UnlockCodeViewController_UITests;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example Project */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				29C58CA021E3CEF300CC7CD2 /* UnlockCodeViewController_UITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				168EA26751B309DA30560DF4 /* Pods */,
 				D7875AE540BEEBE733CEDC64 /* Frameworks */,
@@ -101,6 +129,7 @@
 			children = (
 				607FACD01AFB9204008FA782 /* UnlockCodeViewController_Example.app */,
 				607FACE51AFB9204008FA782 /* UnlockCodeViewController_Tests.xctest */,
+				29C58C9F21E3CEF300CC7CD2 /* UnlockCodeViewController_UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +197,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		29C58C9E21E3CEF300CC7CD2 /* UnlockCodeViewController_UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29C58CA621E3CEF300CC7CD2 /* Build configuration list for PBXNativeTarget "UnlockCodeViewController_UITests" */;
+			buildPhases = (
+				29C58C9B21E3CEF300CC7CD2 /* Sources */,
+				29C58C9C21E3CEF300CC7CD2 /* Frameworks */,
+				29C58C9D21E3CEF300CC7CD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29C58CA521E3CEF300CC7CD2 /* PBXTargetDependency */,
+			);
+			name = UnlockCodeViewController_UITests;
+			productName = UnlockCodeViewController_UITests;
+			productReference = 29C58C9F21E3CEF300CC7CD2 /* UnlockCodeViewController_UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		607FACCF1AFB9204008FA782 /* UnlockCodeViewController_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UnlockCodeViewController_Example" */;
@@ -212,10 +259,15 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					29C58C9E21E3CEF300CC7CD2 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -242,11 +294,19 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* UnlockCodeViewController_Example */,
 				607FACE41AFB9204008FA782 /* UnlockCodeViewController_Tests */,
+				29C58C9E21E3CEF300CC7CD2 /* UnlockCodeViewController_UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		29C58C9D21E3CEF300CC7CD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +396,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29C58C9B21E3CEF300CC7CD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29C58CA921E3CEFF00CC7CD2 /* UnlockCodeViewControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +426,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		29C58CA521E3CEF300CC7CD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* UnlockCodeViewController_Example */;
+			targetProxy = 29C58CA421E3CEF300CC7CD2 /* PBXContainerItemProxy */;
+		};
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* UnlockCodeViewController_Example */;
@@ -385,6 +458,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		29C58CA721E3CEF300CC7CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = UnlockCodeViewController_UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "example.bundle.UnlockCodeViewController-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UnlockCodeViewController_Example;
+			};
+			name = Debug;
+		};
+		29C58CA821E3CEF300CC7CD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = UnlockCodeViewController_UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "example.bundle.UnlockCodeViewController-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UnlockCodeViewController_Example;
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -563,6 +687,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29C58CA621E3CEF300CC7CD2 /* Build configuration list for PBXNativeTarget "UnlockCodeViewController_UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29C58CA721E3CEF300CC7CD2 /* Debug */,
+				29C58CA821E3CEF300CC7CD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "UnlockCodeViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

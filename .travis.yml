@@ -12,5 +12,9 @@ language: swift
 # - pod install --project-directory=Example
 
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/UnlockCodeViewController.xcworkspace -scheme UnlockCodeViewController-Example -sdk iphonesimulator12.1 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/UnlockCodeViewController.xcworkspace -scheme UnlockCodeViewController-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone SE,OS=12.1' ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
+
+# Upload test coverage results to CodeCov
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -J 'UnlockCodeViewController'
