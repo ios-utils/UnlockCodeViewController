@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UnlockCode Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/UnlockCode" class="dashAnchor"></a>
+    <a title="UnlockCode Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">UnlockCodeViewController Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/reececomo/UnlockCodeViewController.git"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">UnlockCodeViewController Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        UnlockCode Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/UnlockCodeViewController.html">UnlockCodeViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/UnlockCode.html">UnlockCode</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UnlockCode</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UnlockCode</span></code></pre>
+
+                </div>
+              </div>
+            <p>An Unlock Code</p>
+
+<p>You should pre-generate the Unlock Code where possible. If you didn&rsquo;t, anyone could just
+ decompile your App and read your code in plaintext. Ideally this would come from a remote
+ server, and then be stored in the keychain.</p>
+
+<p>Obviously giving the <code>length</code> and <code>isNumeric</code> properties greatly reduce the amount of time
+ it takes to crack the unlock code, but these are required to present the <q>4 digit pin</q>
+ style interface.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:24UnlockCodeViewController0aB0V6lengthSivp"></a>
+                    <a name="//apple_ref/swift/Property/length" class="dashAnchor"></a>
+                    <a class="token" href="#/s:24UnlockCodeViewController0aB0V6lengthSivp">length</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Length of the string</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This is required presentation meta-data
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:24UnlockCodeViewController0aB0V9isNumericSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isNumeric" class="dashAnchor"></a>
+                    <a class="token" href="#/s:24UnlockCodeViewController0aB0V9isNumericSbvp">isNumeric</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Is numeric mode</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This is required presentation meta-data
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">isNumeric</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <a href="#/Methods">
+                  <h3 class="section-name">Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:24UnlockCodeViewController0aB0V9isEqualToySbSSF"></a>
+                    <a name="//apple_ref/swift/Method/isEqualTo(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:24UnlockCodeViewController0aB0V9isEqualToySbSSF">isEqualTo(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compare against some <code>String</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isEqualTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialisers"></a>
+                <a name="//apple_ref/swift/Section/Initialisers" class="dashAnchor"></a>
+                <a href="#/Initialisers">
+                  <h3 class="section-name">Initialisers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:24UnlockCodeViewController0aB0V4hash4salt6length9isNumericACSS_SSSiSbtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(hash:salt:length:isNumeric:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:24UnlockCodeViewController0aB0V4hash4salt6length9isNumericACSS_SSSiSbtcfc">init(hash:salt:length:isNumeric:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init with a pre-generated code</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Must use SHA-256 hash
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">salt</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">isNumeric</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:24UnlockCodeViewController0aB0V11generateFor8withSaltACSS_SStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(generateFor:withSalt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:24UnlockCodeViewController0aB0V11generateFor8withSaltACSS_SStcfc">init(generateFor:withSalt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generate a new code on the fly</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It is recommended you do not use this, and instead use a pre-generated code.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">generateFor</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withSalt</span> <span class="nv">salt</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>MIT License</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,22 @@
+module: UnlockCodeViewController
+author: Reece Como
+readme: README.md
+author_url: https://github.com/reececomo/
+github_url: https://github.com/reececomo/UnlockCodeViewController.git
+copyright: 'MIT License'
+
+# settings
+clean: true
+skip_undocumented: false
+hide_documentation_coverage: false
+output: Documentation
+theme: apple
+undocumented_text: 'Undocumented'
+xcodebuild_arguments:
+  - -workspace
+  - 'Example/UnlockCodeViewController.xcworkspace'
+  - -scheme
+  - 'UnlockCodeViewController'
+  - -sdk
+  - 'iphonesimulator12.1'
+  - -UseModernBuildSystem=NO

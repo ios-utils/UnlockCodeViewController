@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UnlockCodeViewController  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="UnlockCodeViewController  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">UnlockCodeViewController Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/reececomo/UnlockCodeViewController.git"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">UnlockCodeViewController Reference</a>
+        <img id="carat" src="img/carat.png" />
+        UnlockCodeViewController  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/UnlockCodeViewController.html">UnlockCodeViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/UnlockCode.html">UnlockCode</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='unlockcodeviewcontroller' class='heading'>UnlockCodeViewController</h1>
+
+<p>A simple drop-in Unlock Code view controller.</p>
+
+<p><a href="https://app.codacy.com/app/reececomo/UnlockCodeViewController?utm_source=github.com&utm_medium=referral&utm_content=reececomo/UnlockCodeViewController&utm_campaign=Badge_Grade_Dashboard"><img src="https://api.codacy.com/project/badge/Grade/4f2d0af666c4407091fcff2363aff515" alt="Codacy Badge"></a>
+<a href="https://codecov.io/gh/reececomo/UnlockCodeViewController"><img src="https://codecov.io/gh/reececomo/UnlockCodeViewController/branch/master/graph/badge.svg" alt="CodeCov Badge"></a>
+<a href="https://travis-ci.org/reececomo/UnlockCodeViewController"><img src="https://travis-ci.org/reececomo/UnlockCodeViewController.svg?branch=master" alt="Build Status"></a>
+<a href="https://cocoapods.org/pods/UnlockCodeViewController"><img src="https://img.shields.io/cocoapods/v/UnlockCodeViewController.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/UnlockCodeViewController"><img src="https://img.shields.io/cocoapods/l/UnlockCodeViewController.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/UnlockCodeViewController"><img src="https://img.shields.io/cocoapods/p/UnlockCodeViewController.svg?style=flat" alt="Platform"></a></p>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/reececomo/UnlockCodeViewController/master/UnlockCodeViewController.jpg" alt="UnlockCodeViewController" width="625" style="max-width:625px;width:auto;height:auto;"/>
+</p>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='basic-usage' class='heading'>Basic Usage</h3>
+<pre class="highlight swift"><code><span class="c1">// Create the view controller</span>
+<span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">UnlockCodeViewController</span><span class="p">(</span><span class="nv">unlockCode</span><span class="p">:</span> <span class="n">myCode</span><span class="p">)</span>
+
+<span class="c1">// Present the view controller</span>
+<span class="n">navigationController</span><span class="o">.</span><span class="nf">setViewControllers</span><span class="p">([</span><span class="n">viewController</span><span class="p">],</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+
+<span class="c1">// Set the unlock action (this can also be set in the constructor)</span>
+<span class="n">viewController</span><span class="o">.</span><span class="n">whenUnlocked</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
+    <span class="n">navigationController</span><span class="o">.</span><span class="nf">setViewControllers</span><span class="p">([</span><span class="n">myLockedContentViewController</span><span class="p">],</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='additional-config' class='heading'>Additional Config</h3>
+<pre class="highlight swift"><code><span class="c1">// (Optional) Additional config</span>
+<span class="n">viewController</span><span class="o">.</span><span class="n">pinCharacter</span> <span class="o">=</span> <span class="s">"*"</span>           <span class="c1">// default: "●"</span>
+<span class="n">viewController</span><span class="o">.</span><span class="n">blankCharacter</span> <span class="o">=</span> <span class="s">"_"</span>         <span class="c1">// default: "○"</span>
+<span class="n">viewController</span><span class="o">.</span><span class="n">playsSound</span> <span class="o">=</span> <span class="kc">false</span>           <span class="c1">// default: `true`</span>
+<span class="n">viewController</span><span class="o">.</span><span class="n">autoDismissOnUnlock</span> <span class="o">=</span> <span class="kc">false</span>  <span class="c1">// default: `false`</span>
+<span class="n">viewController</span><span class="o">.</span><span class="n">autoDismissOnFailure</span> <span class="o">=</span> <span class="kc">true</span>  <span class="c1">// default: `false`</span>
+<span class="n">viewController</span><span class="o">.</span><span class="n">maxAttemptsAllowed</span> <span class="o">=</span> <span class="mi">5</span>       <span class="c1">// default: 3</span>
+</code></pre>
+<h3 id='generating-an-unlockcode' class='heading'>Generating an UnlockCode</h3>
+
+<ul>
+<li>Ideally you would set the unlock code remotely, and load it into your app.</li>
+<li>Then next best option would be to use a pre-generated code. Otherwise anyone can decompile your application and read your code in plaintext.
+&ldquo;`swift
+// Using a pre-generated code (e.g. <q>123456</q>)
+let myCode = UnlockCode(
+hash: <q>2DBD6C5C6085CB173C76E0856CF2EB85DB6A464264704528187E18A808A0D569</q>,
+salt: <q>O%0jc@_Qy)gAa9d</q>,
+length: 6,
+isNumeric: true
+)</li>
+</ul>
+
+<p>// Or generate one on the fly (<em>Not Recommended</em>)
+let myGeneratedCode = UnlockCode(generateFor: <q>123456</q>)</p>
+<pre class="highlight plaintext"><code>
+## Example Project
+
+To run the example project, clone the repo, and run in Xcode 10 or greater.
+
+## Installation
+
+### CocoaPods
+
+UnlockCodeViewController is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'UnlockCodeViewController'
+</code></pre>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Reece Como, <a href="mailto:reece.como@gmail.com">reece.como@gmail.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>UnlockCodeViewController is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>MIT License</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
