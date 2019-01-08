@@ -9,7 +9,7 @@ copyright: 'MIT License'
 clean: true
 skip_undocumented: false
 hide_documentation_coverage: false
-output: Documentation
+output: docs
 theme: apple
 undocumented_text: 'Undocumented'
 xcodebuild_arguments:

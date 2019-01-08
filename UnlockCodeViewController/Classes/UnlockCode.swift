@@ -1,15 +1,13 @@
 import Foundation
 
 /**
- An Unlock Code
+ A hash representing the unlock code.
  
- You should pre-generate the Unlock Code where possible. If you didn't, anyone could just
-  decompile your App and read your code in plaintext. Ideally this would come from a remote
-  server, and then be stored in the keychain.
+ If you need to store the Unlock Code directly in the app, you should pre-generate the SHA-256
+  hash, so that you are not storing your code in plaintext.
  
- Obviously giving the `length` and `isNumeric` properties greatly reduce the amount of time
-  it takes to crack the unlock code, but these are required to present the "4 digit pin"
-  style interface.
+ The `length` and `isNumeric` properties greatly reduce the difficulty of cracking the unlock
+  code, but these are necessary to present the "4 digit pin" style interface.
  */
 public struct UnlockCode {
     

@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 /**
- UnlockCodeViewController
+ A simple view controller that presents an unlock code interface.
  */
 public class UnlockCodeViewController: UIViewController, UITextFieldDelegate {
     
